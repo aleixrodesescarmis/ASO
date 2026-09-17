@@ -1,3 +1,3 @@
 # ASO
-### Aleix Rodés Escarmís
-### Guiti Marica
+### Aleix
+### Guiti Cabron
