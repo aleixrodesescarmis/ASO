@@ -339,17 +339,13 @@ Analitza aquesta afirmació:
 
 > Un usuari només hauria de tenir els permisos estrictament necessaris per realitzar la seva feina.
 
-Explica amb les teves paraules què significa.
+***Explica amb les teves paraules què significa.***
 
----
+Significa que cada usuari ha de tenir només els permisos que necessita per fer la seva feina, sense donar-li accessos que no siguin necessaris. Això ajuda a protegir la informació de l'empresa.
 
----
+***Posa un exemple relacionat amb MusicCloud.***
 
-Posa un exemple relacionat amb MusicCloud.
-
----
-
----
+Per exemple, un treballador de Producció musical no necessita accedir a les carpetes internes d'Administració. Per tant, només hauria de tenir accés als recursos de Producció musical i als recursos comuns que necessiti.
 
 ---
 
@@ -357,12 +353,16 @@ Posa un exemple relacionat amb MusicCloud.
 
 Imagina que demà MusicCloud passa de 14 treballadors a 500.
 
-Quina de les dues estratègies consideres més adequada?
+***Quina de les dues estratègies consideres més adequada?***
 
 ☐ Assignar permisos individualment a cada usuari.
 
-☐ Organitzar els usuaris segons les seves necessitats i assignar permisos a aquests conjunts.
+X Organitzar els usuaris segons les seves necessitats i assignar permisos a aquests conjunts.
 
-Justifica la resposta.
+***Justifica la resposta.***
 
+Aquesta opció seria més adequada perquè amb 500 treballadors seria molt difícil gestionar els permisos un per un. Agrupant els usuaris segons el departament o les seves necessitats, podem assignar els permisos al conjunt i gestionar els accessos de manera més ràpida i ordenada.
 
+A més, si una persona canvia de departament, només caldria canviar-la de conjunt i obtindria els nous permisos corresponents.
+
+---
