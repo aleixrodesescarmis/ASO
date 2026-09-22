@@ -1,2 +1,2 @@
 # ASO
-### Aleix
+### Aleix Rodés Escarmís
