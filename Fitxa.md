@@ -140,24 +140,24 @@ David → lectura/escriptura
 Què passaria si l'empresa tingués **100 treballadors** amb el mateix tipus d'accés?
 
 ---
+Si hi hagués 100 treballadors, seria molt complicat gestionar els permisos un per un. També augmentaria la possibilitat de cometre errors o oblidar algun usuari.
 
----
 
 ### 4.2.
 
 Què passaria cada vegada que s'incorporés una persona nova?
 
 ---
+Cada vegada que s'incorporés una persona nova, hauríem de configurar manualment els seus permisos. Això faria que la gestió fos més lenta i poc pràctica.
 
----
 
 ### 4.3.
 
 Què passaria quan una persona canviés de departament?
 
 ---
+Hauríem de modificar manualment els permisos de la persona i treure-li els accessos que ja no necessita. Amb molts treballadors, aquesta tasca podria provocar errors.
 
----
 
 ### 4.4.
 
@@ -167,11 +167,9 @@ No cal que coneguis encara el nom tècnic de la solució.
 
 ---
 
----
+Una millor opció seria agrupar les persones segons el departament o les seves funcions i assignar els permisos al grup en lloc de fer-ho persona per persona.
 
----
-
----
+D'aquesta manera, quan entra una persona nova, només cal afegir-la al grup corresponent i ja tindrà els permisos necessaris.
 
 # 5. Canvis a MusicCloud
 
