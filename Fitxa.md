@@ -278,18 +278,18 @@ Diverses persones de departaments diferents participen temporalment en el projec
 Campanya Estiu
 ```
 
-Creus que hauríem de canviar-les de departament?
+***Creus que hauríem de canviar-les de departament?***
 
 ☐ Sí  
-☐ No
+X No
 
-Si no, com podríem donar-los accés als recursos del projecte?
+***Si no, com podríem donar-los accés als recursos del projecte?***
 
----
+Podríem crear un conjunt específic per al projecte, per exemple Campanya_Estiu, i afegir-hi temporalment les persones que hi participen.
 
----
+Així, cada persona mantindria el seu departament original, però tindria accés als fitxers de campanya_estiu mentre participés en el projecte.
 
----
+Quan el projecte acabés, es podrien treure del conjunt i deixarien de tenir aquest accés.
 
 # 10. Conclusions
 
