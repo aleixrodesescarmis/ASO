@@ -19,9 +19,9 @@ MusicCloud necessita reorganitzar la seva infraestructura informàtica. Abans d'
 
 # 1. Conèixer MusicCloud
 
-Consulta la informació disponible sobre els departaments, treballadors i perfils d'usuari de MusicCloud.
+***Consulta la informació disponible sobre els departaments, treballadors i perfils d'usuari de MusicCloud.***
 
-Completa la taula següent.
+***Completa la taula següent.***
 
 | Persona | Departament | Funció / responsabilitat | Necessita privilegis especials? Per què? |
 |---|---|---|---|
@@ -45,20 +45,20 @@ Completa la taula següent.
 
 ### 1.1. Reflexió
 
-Quines diferències observes entre un **treballador**, un **departament** i una **funció o responsabilitat**?
+***Quines diferències observes entre un **treballador**, un **departament** i una **funció o responsabilitat**?***
 
---- Un treballador és una persona que forma part de l'empresa i que té unes tasques assignades.
+- Un treballador és una persona que forma part de l'empresa i que té unes tasques assignades.
 
---- Un departament és un grup de treballadors que s'encarrega d'una àrea concreta de l'empresa, com ara Administració, Informàtica o Producció musical.
+- Un departament és un grup de treballadors que s'encarrega d'una àrea concreta de l'empresa, com ara Administració, Informàtica o Producció musical.
 
---- La funció o responsabilitat indica què fa cada treballador dins del seu departament. Per exemple, una persona pot ser treballadora d'Administració i, a més, ser el cap del departament.
+- La funció o responsabilitat indica què fa cada treballador dins del seu departament. Per exemple, una persona pot ser treballadora d'Administració i, a més, ser el cap del departament.
 
-Hi ha persones que, pel seu càrrec o funció, necessiten accessos diferents dels altres membres del seu departament?
+***Hi ha persones que, pel seu càrrec o funció, necessiten accessos diferents dels altres membres del seu departament?***
 
 X Sí  
 ☐ No
 
-Posa'n algun exemple:
+***Posa'n algun exemple:***
 
 Sí. Els caps de departament necessiten alguns permisos addicionals perquè han de poder gestionar i consultar informació del seu departament que els altres treballadors no necessiten.
 
@@ -68,9 +68,9 @@ En el cas d'Informàtica, Talia Costas i Alex Soriano necessiten privilegis tèc
 
 # 2. Recursos de l'empresa
 
-Analitza l'estructura d'informació de MusicCloud.
+***Analitza l'estructura d'informació de MusicCloud.***
 
-Classifica alguns dels recursos següents segons la seva finalitat.
+***Classifica alguns dels recursos següents segons la seva finalitat.***
 
 | Recurs | Qui creus que l'hauria d'utilitzar? | Per a què? |
 |---|---|---|
@@ -85,7 +85,7 @@ Classifica alguns dels recursos següents segons la seva finalitat.
 
 # 3. Qui ha de poder fer què?
 
-Per a cada situació, indica quin nivell d'accés consideres adequat.
+***Per a cada situació, indica quin nivell d'accés consideres adequat.***
 
 Utilitza:
 
@@ -98,7 +98,7 @@ Utilitza:
 - **ADM** → administració
     
 
-No busquis encara una solució tècnica. Pensa només en les necessitats de l'empresa.
+***No busquis encara una solució tècnica. Pensa només en les necessitats de l'empresa.***
 
 | Situació | Accés proposat | Justificació |
 |---|---|---|
@@ -242,13 +242,14 @@ A partir de l'organització de l'empresa, proposa els primers conjunts de person
 
 **No cal trobar encara la solució definitiva.**
 
-|Nom proposat|Qui hi pertanyeria?|Per què existeix aquest conjunt?|
+| Nom proposat | Qui hi pertanyeria? | Per què existeix aquest conjunt? |
 |---|---|---|
-||||
-||||
-||||
-||||
-||||
+| Direcció | Aina Ciurans i Rut Tornil | Per gestionar els accessos comuns de Direcció. |
+| Administració | Dídac Gassó i Laia Macias | Per donar accés als recursos propis d'Administració. |
+| Suport tècnic | Estel Birosta, Aina Zuriguel i Lluïsa Richart | Per gestionar els accessos als recursos de Suport tècnic. |
+| Producció musical | Roser Alberch, Guillem Adella, Meritxell Reglat, Alícia Monclús, Carles Molins i Eulàlia Galcera | Per donar accés als recursos propis de Producció musical. |
+| Informàtica | Talia Costas i Alex Soriano | Per gestionar els accessos i recursos d'Informàtica. |
+| Externs | Pere Espinalt i Neus Bages | Per limitar i gestionar els accessos dels usuaris externs. |
 
 ---
 
