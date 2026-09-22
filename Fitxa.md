@@ -66,6 +66,8 @@ Per exemple, Laia Macias, com a cap d'Administració, té accés de gestió a la
 
 En el cas d'Informàtica, Talia Costas i Alex Soriano necessiten privilegis tècnics amplis perquè són els encarregats de treballar amb els sistemes informàtics. També és necessari que tots dos puguin assumir les tasques de l'altre quan un no estigui disponible.
 
+---
+
 # 2. Recursos de l'empresa
 
 ***Analitza l'estructura d'informació de MusicCloud.***
@@ -167,6 +169,8 @@ Una millor opció seria agrupar les persones segons el departament o les seves f
 
 D'aquesta manera, quan entra una persona nova, només cal afegir-la al grup corresponent i ja tindrà els permisos necessaris.
 
+---
+
 # 5. Canvis a MusicCloud
 
 Ara es produeixen aquests tres canvis:
@@ -198,6 +202,8 @@ Pere Espinalt deixa de col·laborar amb MusicCloud.
 ***Què hauríem de fer amb els seus accessos?***
 
 Hauríem de retirar tots els seus accessos als recursos de MusicCloud, ja que deixa de col·laborar amb l'empresa. També caldria desactivar el seu compte per evitar que pugui tornar a accedir-hi.
+
+---
 
 # 6. Busquem una solució millor
 
@@ -236,6 +242,8 @@ Només caldria treure Dídac del grup d'Administració i afegir-lo al grup de Pr
 
 Els anomenaria departaments, ja que agrupen treballadors que pertanyen a la mateixa àrea de l'empresa i comparteixen necessitats d'accés.
 
+---
+
 # 7. Primera proposta per a MusicCloud
 
 A partir de l'organització de l'empresa, proposa els primers conjunts de persones que crearies.
@@ -270,6 +278,8 @@ No, perquè Laia, a més de ser treballadora d'Administració, és la cap del de
 
 Crear un altre conjunt, per exemple Caps_Administracio, on hi sigui Laia. Així, Laia pertanyeria a Administració per tenir els permisos normals i a Caps_Administracio per tenir els permisos addicionals de responsable.
 
+---
+
 # 9. Un altre cas
 
 Diverses persones de departaments diferents participen temporalment en el projecte:
@@ -291,33 +301,35 @@ Així, cada persona mantindria el seu departament original, però tindria accés
 
 Quan el projecte acabés, es podrien treure del conjunt i deixarien de tenir aquest accés.
 
+---
+
 # 10. Conclusions
 
-Completa les frases amb les teves paraules.
+***Completa les frases amb les teves paraules.***
 
 ### Usuari
 
-Un usuari representa:
+***Un usuari representa:***
 
----
+Una persona que té un compte dins del sistema i que pot accedir als recursos de l'empresa a traves d'aquest compte.
 
 ### Recurs
 
-Un recurs és:
+***Un recurs és:***
 
----
+Un espai o element de l'empresa, com una carpeta o un fitxer, al qual es pot donar diferents nivells d'accés a els usuaris.
 
 ### Permís
 
-Un permís determina:
+***Un permís determina:***
 
----
+Què pot fer un usuari amb un recurs, com llegir, modificar o administrar-lo.
 
 ### Grup
 
-Un grup serveix per:
+***Un grup serveix per:***
 
----
+Agrupar persones que tenen necessitats d'accés semblants i facilitar la gestió dels permisos.
 
 ---
 
