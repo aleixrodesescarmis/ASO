@@ -137,35 +137,31 @@ David → lectura/escriptura
 
 ### 4.1.
 
-Què passaria si l'empresa tingués **100 treballadors** amb el mateix tipus d'accés?
+***Què passaria si l'empresa tingués **100 treballadors** amb el mateix tipus d'accés?***
 
----
 Si hi hagués 100 treballadors, seria molt complicat gestionar els permisos un per un. També augmentaria la possibilitat de cometre errors o oblidar algun usuari.
 
 
 ### 4.2.
 
-Què passaria cada vegada que s'incorporés una persona nova?
+***Què passaria cada vegada que s'incorporés una persona nova?***
 
----
 Cada vegada que s'incorporés una persona nova, hauríem de configurar manualment els seus permisos. Això faria que la gestió fos més lenta i poc pràctica.
 
 
 ### 4.3.
 
-Què passaria quan una persona canviés de departament?
+***Què passaria quan una persona canviés de departament?***
 
----
 Hauríem de modificar manualment els permisos de la persona i treure-li els accessos que ja no necessita. Amb molts treballadors, aquesta tasca podria provocar errors.
 
 
 ### 4.4.
 
-Proposa una manera de gestionar aquestes persones conjuntament.
+***Proposa una manera de gestionar aquestes persones conjuntament.***
 
-No cal que coneguis encara el nom tècnic de la solució.
+***No cal que coneguis encara el nom tècnic de la solució.***
 
----
 
 Una millor opció seria agrupar les persones segons el departament o les seves funcions i assignar els permisos al grup en lloc de fer-ho persona per persona.
 
@@ -179,39 +175,29 @@ Ara es produeixen aquests tres canvis:
 
 Dídac deixa Administració i passa a Producció musical.
 
-Quins accessos hauria de perdre?
+***Quins accessos hauria de perdre?***
 
----
+Hauria de perdre els accessos propis del departament d'Administració, ja que ja no hi treballarà.
 
-Quins accessos hauria d'obtenir?
+***Quins accessos hauria d'obtenir?***
 
----
-
----
+Hauria d'obtenir els accessos corresponents a Producció musical, incloent-hi les carpetes compartides i els recursos que necessiti per fer la seva feina. I altres com permisos de certs projectes només si fa falta.
 
 ### Cas B
 
 S'incorpora una nova treballadora al departament d'Administració.
 
-Quins accessos caldria configurar?
+***Quins accessos caldria configurar?***
 
----
-
----
-
----
+Caldria afegir-la al grup d'Administració perquè tingui els mateixos accessos que la resta de treballadors del departament. També hauria de tenir la seva carpeta personal.
 
 ### Cas C
 
 Pere Espinalt deixa de col·laborar amb MusicCloud.
 
-Què hauríem de fer amb els seus accessos?
+***Què hauríem de fer amb els seus accessos?***
 
----
-
----
-
----
+Hauríem de retirar tots els seus accessos als recursos de MusicCloud, ja que deixa de col·laborar amb l'empresa. També caldria desactivar el seu compte per evitar que pugui tornar a accedir-hi.
 
 # 6. Busquem una solució millor
 
