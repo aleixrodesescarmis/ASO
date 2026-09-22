@@ -257,24 +257,18 @@ A partir de l'organització de l'empresa, proposa els primers conjunts de person
 
 Laia treballa al departament d'Administració, però també és la responsable del departament.
 
-És suficient que pertanyi només al conjunt `Administració`?
+***És suficient que pertanyi només al conjunt `Administració`?***
 
 ☐ Sí  
-☐ No
+X No
 
-Per què?
+***Per què?***
 
----
+No, perquè Laia, a més de ser treballadora d'Administració, és la cap del departament i necessita alguns permisos addicionals que la resta de treballadors no tenen.
 
----
+***Quina possible solució proposes?***
 
-Quina possible solució proposes?
-
----
-
----
-
----
+Crear un altre conjunt, per exemple Caps_Administracio, on hi sigui Laia. Així, Laia pertanyeria a Administració per tenir els permisos normals i a Caps_Administracio per tenir els permisos addicionals de responsable.
 
 # 9. Un altre cas
 
