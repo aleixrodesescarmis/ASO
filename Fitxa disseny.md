@@ -116,19 +116,16 @@ Indica:
 
 **En quina OU ubicaries el seu compte?**
 
----
+A `MusicCloud/Usuaris/Administracio`, perquè és el departament on treballa.
 
 **A quins grups podria pertànyer?**
 
----
-
----
+Als grups `Administracio` i `Campanya_Estiu`, per accedir als recursos del seu departament i als del projecte.
 
 ### Per què no és contradictori que estigui en una OU però pertanyi a diversos grups?
 
----
+Perquè la OU serveix per organitzar el seu compte, mentre que els grups determinen els seus permisos. Així pot participar en diferents projectes sense canviar de departament.
 
----
 
 ---
 
@@ -136,15 +133,12 @@ Indica:
 
 Explica breument què entens per **servei de directori**.
 
----
-
----
+És un servei que permet organitzar i gestionar de manera centralitzada els usuaris, grups, equips i altres recursos d'una xarxa.
 
 Quin problema resol a MusicCloud?
 
----
+Facilita la gestió dels comptes i permisos des d'un mateix lloc, sense haver de configurar cada usuari o equip per separat. Això estalvia temps i millora la seguretat.
 
----
 
 ---
 
