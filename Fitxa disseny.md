@@ -22,7 +22,7 @@ Indica quins tipus d'objectes consideres que ha de contenir el servei de directo
 | Servidors | Servidor de fitxers i del servei de directori. |
 | Comptes d'aplicacions o serveis | Comptes per als serveis, com les còpies de seguretat. |
 
-**Hi afegiries algun altre tipus d'objecte?**
+***Hi afegiries algun altre tipus d'objecte?***
 
 Sí, dispusitius en  xarxa.
 
@@ -90,12 +90,12 @@ Indica quina opció utilitzaries principalment en cada cas.
 
 ### Explica amb les teves paraules la diferència principal entre una OU i un grup.
 
-**OU:**
+***OU:***
 
 Serveix per organitzar els usuaris, equips i altres objectes del directori i facilitar-ne l'administració.
 
 
-**Grup:**
+***Grup:***
 
 Serveix per agrupar usuaris amb necessitats semblants i assignar-los permisos sense haver de fer-ho un per un.
 
@@ -114,37 +114,31 @@ Considera aquest cas:
 
 Indica:
 
-**En quina OU ubicaries el seu compte?**
+***En quina OU ubicaries el seu compte?***
 
----
+A `MusicCloud/Usuaris/Administracio`, perquè és el departament on treballa.
 
-**A quins grups podria pertànyer?**
+***A quins grups podria pertànyer?***
 
----
-
----
+Als grups `Administracio` i `Campanya_Estiu`, per accedir als recursos del seu departament i als del projecte.
 
 ### Per què no és contradictori que estigui en una OU però pertanyi a diversos grups?
 
----
+Perquè la OU serveix per organitzar el seu compte, mentre que els grups determinen els seus permisos. Així pot participar en diferents projectes sense canviar de departament.
 
----
 
 ---
 
 # 5. Servei de directori
 
-Explica breument què entens per **servei de directori**.
+***Explica breument què entens per **servei de directori**.***
 
----
-
----
+És un servei que permet organitzar i gestionar de manera centralitzada els usuaris, grups, equips i altres recursos d'una xarxa.
 
 Quin problema resol a MusicCloud?
 
----
+Facilita la gestió dels comptes i permisos des d'un mateix lloc, sense haver de configurar cada usuari o equip per separat. Això estalvia temps i millora la seguretat.
 
----
 
 ---
 
@@ -152,22 +146,22 @@ Quin problema resol a MusicCloud?
 
 Completa les frases següents.
 
-**LDAP és:**
+***LDAP és:***
 
----
+Un protocol que permet accedir, consultar i modificar la informació d'un servei de directori a través de la xarxa.
 
-**LDAP no és:**
+***LDAP no és:***
 
----
+Un servei de directori en si mateix, ni és el mateix que Active Directory.
 
-Indica si les afirmacions són certes o falses.
+***Indica si les afirmacions són certes o falses.***
 
-|Afirmació|C|F|
+| Afirmació | C | F |
 |---|:-:|:-:|
-|LDAP és sinònim d'Active Directory|☐|☐|
-|LDAP permet accedir i consultar informació d'un directori|☐|☐|
-|OpenLDAP és una implementació d'un servei de directori|☐|☐|
-|Active Directory utilitza LDAP, entre altres tecnologies|☐|☐|
+| LDAP és sinònim d'Active Directory | | X |
+| LDAP permet accedir i consultar informació d'un directori | X | |
+| OpenLDAP és una implementació d'un servei de directori | X | |
+| Active Directory utilitza LDAP, entre altres tecnologies | X | |
 
 ---
 
