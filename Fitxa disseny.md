@@ -105,7 +105,7 @@ Serveix per agrupar usuaris amb necessitats semblants i assignar-los permisos se
 
 Considera aquest cas:
 
-**Dídac Gassó**
+***Dídac Gassó***
 
 - treballa a Administració;
     
