@@ -346,7 +346,6 @@ MusicCloud
 
 Hem separat els objectes segons el seu tipus i funció. Els usuaris s'organitzen per departaments, mentre que els grups, equips, dispositius de xarxa i comptes de servei tenen les seves pròpies OU. Això facilita l'administració i permet ampliar l'estructura si MusicCloud creix.
 
-
 ## Criteri utilitzat per diferenciar OU i grups
 
 Utilitzarem les OU per organitzar els objectes i aplicar configuracions, i els grups per assignar permisos segons el departament, la responsabilitat o els projectes en què participa cada treballador.
