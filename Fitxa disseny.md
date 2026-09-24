@@ -270,7 +270,7 @@ Escull **dues decisions** del teu DIT que consideris importants i justifica-les.
 
 Separar els usuaris en OU segons el seu departament.
 
-**Justificació:**
+***Justificació:***
 
 Això facilita l'organització dels treballadors, la gestió dels comptes i l'aplicació de configuracions segons el departament.
 
@@ -278,7 +278,7 @@ Això facilita l'organització dels treballadors, la gestió dels comptes i l'ap
 
 Crear grups separats per als departaments, responsables i projectes.
 
-**Justificació:**
+***Justificació:***
 
 Permet assignar permisos segons les necessitats de cada usuari, sense haver de configurar-los individualment.
 
