@@ -184,13 +184,80 @@ Ha de mostrar, com a mínim:
 - les subdivisions que consideris necessàries.
     
 
+
+# 7. DIT de MusicCloud
+
 ```text
 MusicCloud
 │
+├── OU_Usuaris
+│   ├── OU_Direccio
+│   │   ├── Aina Ciurans
+│   │   └── Rut Tornil
+│   │
+│   ├── OU_Administracio
+│   │   ├── Didac Gasso
+│   │   └── Laia Macias
+│   │
+│   ├── OU_Suport_Tecnic
+│   │   ├── Estel Birosta
+│   │   ├── Aina Zuriguel
+│   │   └── Lluisa Richart
+│   │
+│   ├── OU_Produccio_Musical
+│   │   ├── Roser Alberch
+│   │   ├── Guillem Adella
+│   │   ├── Meritxell Reglat
+│   │   ├── Alicia Monclus
+│   │   ├── Carles Molins
+│   │   └── Eulalia Galcera
+│   │
+│   ├── OU_Informatica
+│   │   ├── Talia Costas
+│   │   └── Alex Soriano
+│   │
+│   └── OU_Externs
+│       ├── Pere Espinalt
+│       └── Neus Bages
 │
+├── OU_Grups
+│   ├── OU_Departaments
+│   │   ├── GR_Direccio
+│   │   ├── GR_Administracio
+│   │   ├── GR_Suport_Tecnic
+│   │   ├── GR_Produccio_Musical
+│   │   └── GR_Informatica
+│   │
+│   ├── OU_Responsables
+│   │   ├── GR_Caps_Administracio
+│   │   ├── GR_Caps_Suport_Tecnic
+│   │   ├── GR_Caps_Produccio_Musical
+│   │   └── GR_Caps_Informatica
+│   │
+│   ├── OU_Projectes
+│   │   ├── GR_Campanya_Estiu
+│   │   └── GR_Migracio_Servidors
+│   │
+│   └── GR_Administradors_Sistema
 │
+├── OU_Equips
+│   ├── OU_Impressores
+│   ├── OU_Sobretaula
+│   │   └── PC_...
+│   ├── OU_Portatils
+│   │   └── LP_...
+│   ├── OU_Mobils
+│   └── OU_Servidors
 │
+├── OU_Xarxa
+│   ├── OU_Routers
+│   ├── OU_Switches
+│   ├── OU_Firewalls
+│   ├── OU_NAS
+│   └── OU_SAI
 │
+└── OU_Software
+    └── OU_Comptes_Servei
 ```
 
 ---
@@ -201,23 +268,19 @@ Escull **dues decisions** del teu DIT que consideris importants i justifica-les.
 
 ### Decisió 1
 
----
+Separar els usuaris en OU segons el seu departament.
 
 **Justificació:**
 
----
-
----
+Això facilita l'organització dels treballadors, la gestió dels comptes i l'aplicació de configuracions segons el departament.
 
 ### Decisió 2
 
----
+Crear grups separats per als departaments, responsables i projectes.
 
 **Justificació:**
 
----
-
----
+Permet assignar permisos segons les necessitats de cada usuari, sense haver de configurar-los individualment.
 
 ---
 
@@ -227,21 +290,15 @@ Respon breument.
 
 ### a) Per què no seria una bona idea guardar tots els usuaris, grups, equips i servidors al mateix nivell sense organitzar-los?
 
----
-
----
+Perquè seria més difícil trobar i administrar els objectes, especialment si l'empresa creix. També augmentaria la possibilitat de cometre errors.
 
 ### b) Per què no hauríem d'utilitzar les OU per substituir els grups de permisos?
 
----
-
----
+Perquè les OU serveixen per organitzar els objectes, mentre que els grups permeten assignar permisos. Un usuari pot pertànyer a diversos grups, però només pot estar en una OU.
 
 ### c) Si MusicCloud passa de 14 a 500 treballadors, quina característica del disseny que has fet avui facilitarà més l'administració?
 
----
-
----
+L'organització dels usuaris per departaments i l'ús de grups per gestionar els permisos. Així, només caldrà afegir els nous treballadors a les OU i als grups corresponents.
 
 ---
 
@@ -254,15 +311,44 @@ A partir de les decisions preses durant la sessió, deixa definida la proposta q
 ```text
 MusicCloud
 │
+├── OU_Usuaris
+│   ├── OU_Direccio
+│   ├── OU_Administracio
+│   ├── OU_Suport_Tecnic
+│   ├── OU_Produccio_Musical
+│   ├── OU_Informatica
+│   └── OU_Externs
 │
+├── OU_Grups
+│   ├── OU_Departaments
+│   ├── OU_Responsables
+│   └── OU_Projectes
 │
+├── OU_Equips
+│   ├── OU_Impressores
+│   ├── OU_Sobretaula
+│   ├── OU_Portatils
+│   ├── OU_Mobils
+│   └── OU_Servidors
 │
+├── OU_Xarxa
+│   ├── OU_Routers
+│   ├── OU_Switches
+│   ├── OU_Firewalls
+│   ├── OU_NAS
+│   └── OU_SAI
+│
+└── OU_Software
+    └── OU_Comptes_Servei
 ```
 
 ## Criteri utilitzat per organitzar els objectes
 
----
+Hem separat els objectes segons el seu tipus i funció. Els usuaris s'organitzen per departaments, mentre que els grups, equips, dispositius de xarxa i comptes de servei tenen les seves pròpies OU. Això facilita l'administració i permet ampliar l'estructura si MusicCloud creix.
 
----
 
 ## Criteri utilitzat per diferenciar OU i grups
+
+Utilitzarem les OU per organitzar els objectes i aplicar configuracions, i els grups per assignar permisos segons el departament, la responsabilitat o els projectes en què participa cada treballador.
+
+---
