@@ -259,3 +259,15 @@ Get-Service -Name Spooler
 ```
 
 però **sense escriure `Spooler` directament en el cmdlet**.
+
+
+---
+
+
+```powershell
+$nomServei = "Spooler"
+
+Get-Service -Name $nomServei
+```
+
+**Resultat:** Es consulta el servei Spooler utilitzant la variable, sense escriure directament el seu nom dins del cmdlet. Es mostra el seu nom i estat, que pot ser en execució o aturat.
