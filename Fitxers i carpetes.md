@@ -22,15 +22,14 @@ Intenta identificar quina ordre podria servir per:
 - copiar un element;
 - moure un element.
 
----
 
 | Acció | Cmdlet |
 |---|---|
-| Crear un element | `New-Item` |
-| Eliminar un element | `Remove-Item` |
-| Canviar el nom d'un element | `Rename-Item` |
-| Copiar un element | `Copy-Item` |
-| Moure un element | `Move-Item` |
+| Crear un element | New-Item |
+| Eliminar un element | Remove-Item |
+| Canviar el nom d'un element | Rename-Item |
+| Copiar un element | Copy-Item |
+| Moure un element | Move-Item |
 
 Aquestes ordres ens permeten gestionar fitxers i carpetes des de PowerShell.
 
