@@ -223,6 +223,21 @@ i comprova el seu contingut.
 
 ---
 
+
+```powershell
+$serveis = Get-Service
+$serveis
+
+$processos = Get-Process
+$processos
+```
+
+**Resultat:** 
+
+La variable $serveis conté una col·lecció de serveis de Windows, amb informació com el nom i l'estat. No conté un únic valor, sinó diversos elements.
+
+La variable $processos conté una col·lecció dels processos de l'equip, amb informació com el nom, l'identificador i el consum de recursos.
+
 ## 7. Aplicació a administració
 
 Crea una variable:
