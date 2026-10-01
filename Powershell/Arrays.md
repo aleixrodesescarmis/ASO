@@ -128,3 +128,6 @@ Primer servidor: SRV-DC01
 Últim servidor: SRV-FILES01
 Nombre de servidors: 4
 ```
+Es mostra el primer servidor, l'últim servidor i el nombre total de servidors sense escriure els noms manualment.
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power8.png)
