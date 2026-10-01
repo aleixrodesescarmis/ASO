@@ -106,12 +106,15 @@ Mostra'n el contingut.
 
 Es mostra l'array amb SRV01, SRV02 i SRV03.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power5.png)
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power6.png)
 
 ## 7. Resultats d'un cmdlet
 
 Utilitza un array per a determinar el número de processos que s'estan executant en el sistema.
 
+La comanda mostra el nombre total de processos que s'estan executant en el sistema.
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power7.png)
 
 ## 8. General
 
