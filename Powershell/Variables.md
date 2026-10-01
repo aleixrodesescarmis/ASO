@@ -39,6 +39,8 @@ $port
 
 **Resultat:** Es mostren els valors assignats a les quatre variables: Pere, SRV01, 192.168.1.10 i 8080.
 
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power1.png)
+
 ## 2. Modificar una variable
 
 Crea:
