@@ -248,7 +248,8 @@ La variable $serveis conté una col·lecció de serveis de Windows, amb informac
 
 La variable $processos conté una col·lecció dels processos de l'equip, amb informació com el nom, l'identificador i el consum de recursos.
 
-![Descripción de la imagen](/Fotos/Powershell/Variables/Power6.png)
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power6.1.png)
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power6.2.png)
 
 ## 7. Aplicació a administració
 
