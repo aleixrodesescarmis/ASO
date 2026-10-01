@@ -72,6 +72,8 @@ $servidor
 
 **Resultat:** Primer apareix SRV01 i després SRV02. La variable conserva l'últim valor assignat.
 
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power2.png)
+
 ## 3. Operacions
 
 Crea dues variables:
@@ -122,6 +124,8 @@ $resultat
 - Multiplicació: 100
 - Divisió: 4
 
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power3.png)
+
 ## 4. Variables dins d'un text
 
 Crea:
@@ -152,6 +156,8 @@ Write-Host "L'usuari $nom està treballant amb el servidor $servidor"
 **Resultat:**
 
 L'usuari Anna està treballant amb el servidor SRV01
+
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power4.png)
 
 ## 5. Cometes
 
@@ -195,6 +201,8 @@ Servidor: $servidor
 ```
 
 **Diferència:** Les cometes dobles substitueixen la variable pel seu valor. Les cometes simples mostren el text literal, sense interpretar la variable.
+
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power5.png)
 
 ## 6. Guardar el resultat d'una ordre
 
@@ -240,6 +248,8 @@ La variable $serveis conté una col·lecció de serveis de Windows, amb informac
 
 La variable $processos conté una col·lecció dels processos de l'equip, amb informació com el nom, l'identificador i el consum de recursos.
 
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power6.png)
+
 ## 7. Aplicació a administració
 
 Crea una variable:
@@ -273,3 +283,5 @@ Get-Service -Name $nomServei
 ```
 
 **Resultat:** Es consulta el servei Spooler utilitzant la variable, sense escriure directament el seu nom dins del cmdlet. Es mostra el seu nom i estat, que pot ser en execució o aturat.
+
+![Descripción de la imagen](/Fotos/Powershell/Variables/Power7.png)
