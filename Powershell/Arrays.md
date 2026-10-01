@@ -75,10 +75,22 @@ Crea un array numèric amb els següents ports: 22, 80, 443 i 3389
 Respon (i digues quina comanda has executat per obtenir la resposta):
 
 - Quants ports hi ha?
+
+Quants ports hi ha? 4 → $ports.Count
+
 - Quin és el primer?
+
+Quin és el primer? 22 → $ports[0]
+
 - Quin és l'últim?
+
+Quin és l'últim? 3389 → $ports[-1]
+
 - Quin tipus té el primer element?
 
+Quin tipus té el primer element? Int32 → $ports[0].GetType().Name
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power5.png)
 
 ## 6. Array i variables
 
