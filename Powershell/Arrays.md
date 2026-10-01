@@ -48,6 +48,9 @@ SRV05
 ```
 i torna a comprovar el nombre d'elements.
 
+Primer hi ha 4 servidors. Després d'afegir SRV05, n'hi ha 5.
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power2.png)
 
 ## 4. Modificar un element
 
