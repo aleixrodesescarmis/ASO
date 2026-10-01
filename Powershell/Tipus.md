@@ -16,12 +16,15 @@ Consulta el tipus de cadascuna amb:
 ```
 Completa una taula com aquesta:
 
-| Variable | Valor        | Tipus |
-| -------- | ------------ | ----- |
-| $nom     | `Servidor01` |       |
-| $port    | `443`        |       |
-| $actiu   | $true        |       |
-| $espai   | `12.5`       |       |
+| Variable | Valor | Tipus |
+|---|---|---|
+| $nom | `Servidor01` | String |
+| $port | `443` | Int32 |
+| $actiu | $true | Boolean |
+| $espai | `12.5` | Double |
+
+![Descripción de la imagen](/Fotos/Powershell/Tipus/Power1.png)
+
 ## 2. Número o text?
 
 Executa:
