@@ -112,6 +112,11 @@ $portText.GetType()
 Respon:
 
 **Tot i que visualment els dos valors semblen `443`, són del mateix tipus?**
+
+No, no són del mateix tipus. $port és Int32 i $portText és String, encara que els dos mostrin 443.
+
+![Descripción de la imagen](/Fotos/Powershell/Tipus/Power4.png)
+
 ## 5. Booleans
 
 Crea:
@@ -126,6 +131,11 @@ Després mostra un missatge amb:
 Write-Host "Servei actiu: $serveiActiu"
 Write-Host "Servidor disponible: $servidorDisponible"
 ```
+
+Les dues variables són de tipus Boolean. Es mostra que el servei està actiu (True) i que el servidor no està disponible (False).
+
+![Descripción de la imagen](/Fotos/Powershell/Tipus/Power5.png)
+
 ## 6. General
 
 Crea variables per representar un servidor amb aquesta informació:
@@ -140,3 +150,10 @@ Després:
 1. mostra el valor de totes les variables;
 2. consulta el tipus de cadascuna;
 3. indica quin tipus de dada has utilitzat per cada valor.
+
+- SRV-WEB01 - String - Text per al nom del servidor.
+- 443 - Int32 - Número enter per al port.
+- 125.7 - Double - Número decimal per a l'espai lliure.
+- True - Boolean - Valor lògic per indicar si està actiu.
+
+![Descripción de la imagen](/Fotos/Powershell/Tipus/Power6.png)
