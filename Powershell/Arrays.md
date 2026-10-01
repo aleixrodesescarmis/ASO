@@ -104,6 +104,9 @@ Després crea un array a partir d'aquestes variables:
 
 Mostra'n el contingut.
 
+Es mostra l'array amb SRV01, SRV02 i SRV03.
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power5.png)
 
 ## 7. Resultats d'un cmdlet
 
