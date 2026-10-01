@@ -31,7 +31,7 @@ Respon:
 **Quina és la posició del primer element d'un array?**
 El primer element d'un array ocupa la posició 0.
 
-Es mostren el primer, segon i quart servidor.
+Es mostren el primer, segon i quart servidor (0, 1 i 3 en l'array).
 
 ![Descripción de la imagen](/Fotos/Powershell/Arrays/Power2.png)
 
@@ -76,19 +76,19 @@ Respon (i digues quina comanda has executat per obtenir la resposta):
 
 - Quants ports hi ha?
 
-Quants ports hi ha? 4 → $ports.Count
+4 → $ports.Count
 
 - Quin és el primer?
 
-Quin és el primer? 22 → $ports[0]
+22 → $ports[0]
 
 - Quin és l'últim?
 
-Quin és l'últim? 3389 → $ports[-1]
+3389 → $ports[-1]
 
 - Quin tipus té el primer element?
 
-Quin tipus té el primer element? Int32 → $ports[0].GetType().Name
+Int32 → $ports[0].GetType().Name
 
 ![Descripción de la imagen](/Fotos/Powershell/Arrays/Power5.png)
 
