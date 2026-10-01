@@ -44,11 +44,22 @@ $a + $b
 Respon:
 
 - Quin resultat obtens en cada cas?
+
+**Primer cas:** el resultat és **15**, perquè les variables són números i es fa una suma.
+
+**Segon cas:** el resultat és **105**, perquè les variables són textos i s'uneixen els dos valors.
+
 - Per què no és el mateix?
 Mostra després el contingut de cadascuna de les variables.
 
+Perquè en el primer cas les variables són números i el signe + fa una suma. En el segon cas són textos i el signe + uneix els dos textos.
 
 - Quin tipus tenen $a i $b en cada cas?
+
+En el primer cas, $a i $b són **Int32**. En el segon cas, són **String**.
+
+![Descripción de la imagen](/Fotos/Powershell/Tipus/Power2.png)
+
 ## 3. Canviar el tipus d'una variable
 
 Executa:
@@ -70,6 +81,16 @@ $valor.GetType()
 Respon:
 
 **Ha canviat el valor? Ha canviat el tipus?**
+
+### Resultat
+
+- **Valor:** No ha canviat, continua sent 100.
+- **Tipus:** Sí que ha canviat. Primer era Int32 i després passa a ser String.
+
+Per tant, el valor es veu igual, però el tipus de dada és diferent.
+
+![Descripción de la imagen](/Fotos/Powershell/Tipus/Power3.png)
+
 ## 4. Tipus explícits
 
 Executa:
