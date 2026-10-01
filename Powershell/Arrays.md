@@ -17,7 +17,7 @@ $servidors
 
 Es mostra tot el contingut de l'array amb els quatre servidors.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power2.png)
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power1.png)
 
 ## 2. Accedir a posicions
 Amb l'array anterior, mostra:
@@ -29,7 +29,11 @@ Amb l'array anterior, mostra:
 Respon:
 
 **Quina és la posició del primer element d'un array?**
+El primer element d'un array ocupa la posició 0.
 
+Es mostren el primer, segon i quart servidor.
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power2.png)
 
 ## 3. Comptar elements
 Utilitza:
