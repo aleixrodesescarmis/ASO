@@ -50,7 +50,7 @@ i torna a comprovar el nombre d'elements.
 
 Primer hi ha 4 servidors. Després d'afegir SRV05, n'hi ha 5.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power2.png)
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power3.png)
 
 ## 4. Modificar un element
 
@@ -64,6 +64,9 @@ SRV-WEB01
 ```
 Mostra després tot l'array.
 
+L'array queda amb els servidors SRV01, SRV-WEB01 i SRV03.
+
+![Descripción de la imagen](/Fotos/Powershell/Arrays/Power4.png)
 
 ## 5. Array de ports
 
