@@ -332,6 +332,12 @@ Pas 2 → ...
 Pas 3 → ...
 ```
 
+>Pas 1: obtenir els elements: Get-ChildItem
+
+>Pas 2: ordenar els elements per mida: Get-ChildItem | Sort-Object Length -Descending
+
+>Pas 3: mostrar els 3 elements mes grans: Get-ChildItem | Sort-Object Length -Descending | Select-Object -First 3
+
 No escriguis directament l'ordre final.
 
 L'objectiu és construir el pipeline **una operació cada vegada**.
