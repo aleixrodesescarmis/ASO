@@ -195,7 +195,7 @@ Comprova-ho executant:
 Get-Process | Select-Object -First 5
 ```
 
-En aquest cas s'obtenen els primers 5 processos sense ordenar-los per consum de CPU.
+>En aquest cas s'obtenen els primers 5 processos sense ordenar-los per consum de CPU.
 
 
 ![Descripción de la imagen](/Fotos/Powershell/Pipeline/Power3.2.png)
@@ -205,7 +205,7 @@ Els cinc processos obtinguts són necessàriament els que consumeixen més CPU?
 
 Explica per què.
 
-No. Com que no s'han ordenat per CPU abans de seleccionar-los, només són els primers processos que retorna Get-Process.
+>No. Com que no s'han ordenat per CPU abans de seleccionar-los, només són els primers processos que retorna Get-Process.
 
 ---
 
@@ -213,13 +213,21 @@ No. Com que no s'han ordenat per CPU abans de seleccionar-los, només són els p
 
 Emmagatzema en una variable tots els processos que s'estan executant ordenats de **major a menor consum de CPU**.
 
+> He utilitzat la seguent comanda: $processos = Get-Process | Sort-Object CPU -Descending
+
 Mostra després el contingut de la variable.
 
 A partir de la variable anterior:
 
 1. mostra els tres primers processos;
+>$processos | Select-Object -First 3
+
 2. mostra els cinc primers;
+>$processos | Select-Object -First 5
+
 3. mostra els deu primers.
+>$processos | Select-Object -First 10
+
 
 No tornis a executar `Get-Process` per fer aquests tres apartats.
 
@@ -246,9 +254,17 @@ Get-Process |
 Respon:
 
 1. Les dues ordres fan el mateix?
+>No, no fan el mateix.
+
 2. Per què?
+>Perquè l'ordre dels cmdlets canvia el resultat. En el primer cas, primer s'ordenen tots els processos i després se'n seleccionen 5. En el segon, primer se'n seleccionen 5 i després només s'ordenen aquests.
+
 3. Quants processos arriben a `Sort-Object` en el primer cas?
+>Tots els processos del sistema.
+
 4. Quants processos arriben a `Sort-Object` en el segon?
+>Només 5 processos.
+
 
 Aquest exercici és important: **l'ordre dels cmdlets dins del pipeline modifica el resultat**.
 
@@ -264,19 +280,31 @@ Get-ChildItem
 
 Ara ordena el resultat pel nom.
 
+>Get-ChildItem | Sort-Object Name
+
 Després ordena'l segons la seva mida.
 
-> Pista: observa les dades que mostra `Get-ChildItem`.
+>Get-ChildItem | Sort-Object Length
+
+Pista: observa les dades que mostra `Get-ChildItem`.
 
 Mostra per pantalla els dos elements més grans.
+
+>Get-ChildItem | Sort-Object Length -Descending | Select-Object -First 2
 
 Després:
 
 1. mostra els tres elements més petits;
+>Get-ChildItem | Sort-Object Length | Select-Object -First 3
+
 2. mostra els cinc elements més grans;
+>Get-ChildItem | Sort-Object Length -Descending | Select-Object -First 5
+
 3. guarda aquests cinc elements en una variable.
+>$elementsGrans = Get-ChildItem | Sort-Object Length -Descending | Select-Object -First 5
 
 Comprova el contingut de la variable.
+>$elementsGrans 
 
 ---
 
