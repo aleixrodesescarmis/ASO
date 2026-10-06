@@ -168,15 +168,18 @@ Get-Process |
     Select-Object -First 5
 ```
 
+![Descripción de la imagen](/Fotos/Powershell/Pipeline/Power3.1.png)
+
+
 No continuïs fins haver observat el resultat de cada ordre.
 
 Completa:
 
-| Pas | Ordre | Què entra? | Què surt? |
-|---|---|---|---|
-| 1 | `Get-Process` | | |
-| 2 | `Sort-Object CPU` | | |
-| 3 | `Select-Object -First 5` | | |
+| Pas | Ordre                    | Què entra?             | Què surt?                      |
+| --- | ------------------------ | ---------------------- | ------------------------------ |
+| 1   | `Get-Process`            | El sistema             | Tots els processos             |
+| 2   | `Sort-Object CPU`        | Els processos          | Els processos ordenats per CPU |
+| 3   | `Select-Object -First 5` | Els processos ordenats | Només els 5 primers            |
 
 Explica què passaria si eliminéssim:
 
@@ -192,9 +195,17 @@ Comprova-ho executant:
 Get-Process | Select-Object -First 5
 ```
 
+En aquest cas s'obtenen els primers 5 processos sense ordenar-los per consum de CPU.
+
+
+![Descripción de la imagen](/Fotos/Powershell/Pipeline/Power3.2.png)
+
+
 Els cinc processos obtinguts són necessàriament els que consumeixen més CPU?
 
 Explica per què.
+
+No. Com que no s'han ordenat per CPU abans de seleccionar-los, només són els primers processos que retorna Get-Process.
 
 ---
 
