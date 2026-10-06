@@ -574,6 +574,8 @@ Després explica:
 
 **Quin avantatge té utilitzar el pipeline respecte d'anar creant variables intermèdies?**
 
+>El pipeline permet fer les operacions de manera més directa i ordenada, sense haver de crear tantes variables intermèdies. Això fa que el codi sigui més curt i fàcil de seguir.
+
 ---
 
 ## 13. Predir abans d'executar
