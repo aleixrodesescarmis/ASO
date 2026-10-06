@@ -109,11 +109,22 @@ Compara-ho amb:
 Get-Service | Sort-Object Name
 ```
 
+![Descripción de la imagen](/Fotos/Powershell/Pipeline/Power2.1.png)
+
 Respon:
 
 1. Obtenen el mateix resultat?
+
+>Sí, les dues formes mostren els serveis ordenats pel nom.
+
 2. Quina diferència hi ha entre les dues formes de treballar?
+
+>En la primera forma, primer guardem els serveis en una variable i després els ordenem. En la segona, els obtenim i els ordenem directament amb el pipeline.
+
 3. En quin cas s'ha guardat prèviament la informació en una variable?
+
+>En el primer cas, a la variable $serveis.
+
 
 Crea ara:
 
@@ -127,7 +138,11 @@ Mostra:
 $serveisOrdenats
 ```
 
+![Descripción de la imagen](/Fotos/Powershell/Pipeline/Power2.2.png)
+
 Explica què conté aquesta variable.
+
+>La variable $serveisOrdenats conté tots els serveis obtinguts amb Get-Service, ordenats pel seu nom.
 
 ---
 
