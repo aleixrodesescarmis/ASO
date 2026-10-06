@@ -367,8 +367,17 @@ $servidors | Sort-Object
 Respon:
 
 1. Què està enviant `$servidors` al pipeline?
+
+>Està enviant els quatre servidors.
+
 2. Quants elements passen pel pipeline?
+
+>Passen 4 elements.
+
 3. `Sort-Object` modifica la variable original?
+
+>No. Només ordena el resultat que passa pel pipeline.
+
 
 Comprova-ho tornant a executar:
 
@@ -377,6 +386,8 @@ $servidors
 ```
 
 Ara ordena els servidors en ordre invers.
+
+>Ho he ordenat aixi: $servidors | Sort-Object -Descending
 
 ---
 
