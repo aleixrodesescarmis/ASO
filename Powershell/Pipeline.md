@@ -402,10 +402,25 @@ $ports = 443, 22, 8080, 80, 3389
 Mostra:
 
 1. els ports tal com estan emmagatzemats;
+
+>$ports
+
 2. els ports ordenats de menor a major;
+
+>$ports | Sort-Object
+
 3. els ports ordenats de major a menor;
+
+>$ports | Sort-Object -Descending
+
 4. els dos ports més petits;
+
+>$ports | Sort-Object | Select-Object -First 2
+
 5. els dos ports més grans.
+
+>$ports | Sort-Object -Descending | Select-Object -First 2
+
 
 En cada cas, utilitza `$ports` com a origen del pipeline.
 
@@ -441,14 +456,35 @@ Get-Process | Measure-Object
 Respon:
 
 1. Què està comptant cada cas?
+
+>En els dos casos es compten els processos que s'estan executant.
+
 2. Quin resultat obtens?
+
+>El nombre de processos és el mateix en els dos casos.
+
 3. Quina diferència observes en la sortida?
+
+>$processos.Count mostra directament el nombre, mentre que Measure-Object mostra informació més detallada, incloent-hi Count.
+
 
 Fes el mateix amb:
 
 ```powershell
 Get-Service
 ```
+
+1. Què està comptant cada cas?
+
+>En els dos casos es compten els serveis del sistema.
+
+2. Quin resultat obtens?
+
+>En els dos casos s'obté el mateix nombre de serveis.
+
+3. Quina diferència observes en la sortida?
+
+>Measure-Object mostra informació com el Count, mentre que $serveis.Count mostra directament el nombre de serveis.
 
 ---
 
@@ -471,9 +507,21 @@ $resultat
 Respon:
 
 1. Què conté `$resultat`?
+
+>Conté els 5 processos amb més consum de CPU.
+
 2. Conté tots els processos?
+
+>No, només conté els 5 primers després d'ordenar-los per CPU.
+
 3. En quin moment s'ha assignat el valor a `$resultat`?
+
+>Quan s'ha executat el pipeline i s'ha assignat el seu resultat a la variable.
+
 4. Quants elements conté?
+
+>Conté 5 elements.
+
 
 Comprova-ho:
 
@@ -512,6 +560,15 @@ seleccionar-ne cinc
 ```
 
 Comprova que el resultat final sigui equivalent.
+
+>He 
+>$processos = Get-Process
+
+>$processosOrdenats = $processos | Sort-Object CPU -Descending
+
+>$resultat = $processosOrdenats | Select-Object -First 5
+
+>$resultat
 
 Després explica:
 
