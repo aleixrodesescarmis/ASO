@@ -24,10 +24,22 @@ Get-Process |
 Respon:
 
 1. `Get-Process` mostra inicialment totes les propietats de l'objecte?
+
+> No, només mostra unes 6 o 7 propietats.
+
 2. Quina diferència hi ha entre `Select-Object *` i `Get-Member`?
-  3. Localitza almenys tres propietats que no coneixies. 
-    
+
+> Get-Member dona els valors de les propietats que te informació, mentres el Select-Object * dona certes propietats, estiguin buides o amb informació.
+
+3. Localitza almenys tres propietats que no coneixies. 
+
+>- SynchronizingObject
+>- HandleCount
+>- CreateObjRef
+
 Utilitza després `Select-Object` per mostrar únicament tres propietats que consideris útils.
+
+>Get-Process | Select-Object -First 1 | Select-Object Name, Id, CPU
 
 
 ## 2. Seleccionar propietats i objectes
@@ -35,17 +47,27 @@ Utilitza després `Select-Object` per mostrar únicament tres propietats que con
 Amb `Get-Process`, construeix ordres que permetin:
 
 1. mostrar només `Name` i `CPU`;
+
+>Get-Process | Select-Object Name, CPU
     
 2. mostrar només `Name`, `Id` i `CPU`;
-    
+
+>Get-Process | Select-Object Name, ID, CPU
+
 3. mostrar només els cinc primers processos;
-    
+
+>Get-Process | Select-Object -First 5
+
 4. mostrar només els tres últims processos.
-    
+
+>Get-Process | Select-Object -Last 3    
 
 Respon:
 
 **Quina diferència hi ha entre seleccionar propietats i seleccionar objectes?**
+
+>Seleccionar propietats: escollim quines dades volem mostrar de cada objecte, per exemple Name, Id o CPU.
+>Seleccionar objectes: escollim quins objectes volem obtenir, per exemple els 5 primers processos o els 3 últims.
 
 
 ## 3. Ordenar i seleccionar
@@ -59,6 +81,7 @@ Name
 Id
 CPU
 ```
+>Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 Name, Id, CPU
 
 Compara després aquestes dues estratègies:
 
@@ -75,11 +98,20 @@ seleccionar 5 → ordenar
 Respon:
 
 1. Fan el mateix?
+
+>No
     
 2. Per què?
-    
+
+>Ordenar → Seleccionar 5: Primer ordena tots els processos de més a menys CPU i després agafa els 5 primers. Per tant, obtenim els 5 processos amb més CPU.
+
+>Seleccionar 5 → Ordenar: Primer agafa només els 5 primers processos que troba i després els ordena per CPU. No necessàriament seran els 5 que més CPU consumeixen.
+
 3. Quants processos rep `Sort-Object` en cada cas?
-    
+
+>  Ordenar → Seleccionar 5: Sort-Object rep tots els processos.
+> Seleccionar 5 → Ordenar: Sort-Object rep només 5 processos.
+
 ## 4. Primer filtre
 
 Crea:
