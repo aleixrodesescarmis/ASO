@@ -241,14 +241,24 @@ Construeix filtres que mostrin:
 Construeix progressivament un pipeline que:
 
 1. obtingui tots els processos;
+
+>Get-Process
     
 2. deixi només els processos amb `CPU > 5`;
+
+>Get-Process | Where-Object { $_.CPU -gt 5 }
     
 3. deixi, a més, només els processos amb `Id > 1000`;
+
+>Get-Process | Where-Object { $_.CPU -gt 5 } | Where-Object { $_.Id -gt 1000 }
     
 4. els ordeni de major a menor CPU;
+
+>Get-Process | Where-Object { $_.CPU -gt 5 } | Where-Object { $_.Id -gt 1000 } | Sort-Object CPU -Descending
     
 5. mostri només els cinc primers;
+
+>Get-Process | Where-Object { $_.CPU -gt 5 } | Where-Object { $_.Id -gt 1000 } | Sort-Object CPU -Descending | Select-Object -First 5
     
 6. mostri només les propietats:
 ```
@@ -256,6 +266,7 @@ Name
 Id
 CPU
 ```
+>Get-Process | Where-Object { $_.CPU -gt 5 } | Where-Object { $_.Id -gt 1000 } | Sort-Object CPU -Descending | Select-Object -First 5 | Select-Object Name, Id, CPU
 
 No intentis escriure directament tota l'ordre.
 
@@ -277,6 +288,23 @@ ____________
 
 Indica què entra i què surt de cada etapa.
 
+
+
+```
+Get-Process
+     ↓
+Where-Object { $_.CPU -gt 5 } 
+     ↓
+Where-Object { $_.Id -gt 1000 }
+     ↓
+Sort-Object CPU -Descending
+     ↓
+Select-Object -First 5
+     ↓
+Select-Object Name, Id, CPU
+```
+
+
 ## 9. Detectar errors de raonament
 
 Un alumne vol obtenir els cinc processos amb més CPU:
@@ -290,6 +318,16 @@ Get-Process |
 L'ordre funciona.
 
 **Resol correctament el problema? Justifica la resposta i corregeix-la.**
+
+>No. Primer selecciona els cinc primers processos que troba i després els ordena per CPU. Per tant, no necessàriament són els cinc processos que consumeixen més CPU de tot el sistema.
+
+>Codi corretgit:
+
+```
+Get-Process |  
+    Sort-Object CPU -Descending | 
+    Select-Object -First 5
+```
 
 # 10. Conclusions
 
