@@ -12,4 +12,5 @@ En aquest repositori hi ha materials, exercicis i pràctiques relacionats amb l'
 
 L'objectiu del repositori és organitzar les pràctiques i els exercicis de l'assignatura, documentar el treball realitzat i tenir un espai on consultar els continguts i els coneixements adquirits.
 
-### Aleix Rodés Escarmís - 2ASIX Bosc de la Coma
+---
+### Aleix Rodés Escarmís
