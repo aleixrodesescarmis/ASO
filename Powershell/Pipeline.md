@@ -61,7 +61,7 @@ Fes ara la prova:
 Get-Service | Sort-Object Status
 ```
 
-![Descripción de la imagen](/02_Powershell/Fotos/05_Pipeline/Power1.1.png)
+![Descripción de la imagen](/Powershell/Imatges/Pipeline/Power1.1.png)
 
 Què ha canviat?
 
@@ -74,7 +74,7 @@ Finalment:
 Get-Service | Sort-Object Status -Descending
 ```
 
-![Descripción de la imagen](/02_Powershell/Fotos/05_Pipeline/Power1.2.png)
+![Descripción de la imagen](/Powershell/Imatges/Pipeline/Power1.2.png)
 
 Explica amb les teves paraules què ha fet el pipeline.
 
@@ -109,7 +109,7 @@ Compara-ho amb:
 Get-Service | Sort-Object Name
 ```
 
-![Descripción de la imagen](/02_Powershell/Fotos/05_Pipeline/Power2.1.png)
+![Descripción de la imagen](/Powershell/Imatges/Pipeline/Power2.1.png)
 
 Respon:
 
@@ -138,7 +138,7 @@ Mostra:
 $serveisOrdenats
 ```
 
-![Descripción de la imagen](/02_Powershell/Fotos/05_Pipeline/Power2.1.png)
+![Descripción de la imagen](/Powershell/Imatges/Pipeline/Power2.2.png)
 
 Explica què conté aquesta variable.
 
@@ -168,7 +168,7 @@ Get-Process |
     Select-Object -First 5
 ```
 
-![Descripción de la imagen](/02_Powershell/Fotos/05_Pipeline/Power3.1.png)
+![Descripción de la imagen](/Powershell/Imatges/Pipeline/Power3.1.png)
 
 
 No continuïs fins haver observat el resultat de cada ordre.
@@ -198,7 +198,7 @@ Get-Process | Select-Object -First 5
 >En aquest cas s'obtenen els primers 5 processos sense ordenar-los per consum de CPU.
 
 
-![Descripción de la imagen](/02_Powershell/Fotos/05_Pipeline/Power3.1.png)
+![Descripción de la imagen](/Powershell/Imatges/Pipeline/Power3.2.png)
 
 
 Els cinc processos obtinguts són necessàriament els que consumeixen més CPU?

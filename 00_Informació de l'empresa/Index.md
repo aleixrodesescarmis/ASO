@@ -1,8 +1,0 @@
-# Índex — Informació de l'empresa
-
-- [B00.T.00. Repte de MusicCloud](/00_Informació%20de%20l'empresa/Presentació%20de%20l'empresa/B00.T.00.Repte%20de%20MusicCloud.md)
-- [B00.T.01. Dades empresa](/00_Informació%20de%20l'empresa/Presentació%20de%20l'empresa/B00.T.01.Dades%20empresa.md)
-- [B00.T.02. Departaments](/00_Informació%20de%20l'empresa/Presentació%20de%20l'empresa/B00.T.02.Departaments.md)
-- [B00.T.03. Treballadors](/00_Informació%20de%20l'empresa/Presentació%20de%20l'empresa/B00.T.03.Treballadors.md)
-- [B00.T.04. Perfils usuari](/00_Informació%20de%20l'empresa/Presentació%20de%20l'empresa/B00.T.04.Perfils%20usuari.md)
-- [B00.T.05. Estructura de la informació](/00_Informació%20de%20l'empresa/Presentació%20de%20l'empresa/B00.T.05.Estructura%20de%20la%20informació.md)
