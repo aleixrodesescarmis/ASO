@@ -319,9 +319,7 @@ L'ordre funciona.
 
 **Resol correctament el problema? Justifica la resposta i corregeix-la.**
 
->No. Primer selecciona els cinc primers processos que troba i després els ordena per CPU. Per tant, no necessàriament són els cinc processos que consumeixen més CPU de tot el sistema.
-
->Codi corretgit:
+>No. Primer selecciona els cinc primers processos que troba i després els ordena per CPU. Per tant, no necessàriament són els cinc processos que consumeixen més CPU de tot el sistema. Codi corretgit:
 
 ```
 Get-Process |  
