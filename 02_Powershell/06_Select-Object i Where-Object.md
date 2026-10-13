@@ -332,16 +332,30 @@ Get-Process |
 Explica amb les teves paraules:
 
 1. Per a què serveix `Select-Object`?
+
+>Serveix per seleccionar els objectes que volem obtenir o les propietats que volem mostrar.
     
 2. Quina diferència hi ha entre seleccionar **objectes** i seleccionar **propietats**?
+
+>Seleccionar objectes vol dir escollir quins elements volem obtenir, per exemple, els cinc primers processos. Seleccionar propietats vol dir escollir quines dades volem mostrar, com ara Name, Id i CPU.
     
 3. Quina diferència hi ha entre `Get-Member` i `Select-Object *`?
+
+>Get-Member mostra les propietats i els mètodes que té un objecte i el seu tipus. En canvi, Select-Object * mostra totes les propietats de l'objecte i els seus valors.
       
 4. Per a què serveix `Where-Object`?
+
+>Serveix per filtrar objectes segons una condició i deixar passar només els que la compleixen.
     
 5. Què representa `$_`? I `$_.CPU`?
+
+>$_ representa l'objecte actual que passa pel pipeline. $_.CPU representa el valor de la propietat CPU d'aquest objecte.
+
     
 6. Què passa amb un objecte quan la condició de `Where-Object` retorna `True`? I quan retorna `False`?
+
+>- **`True`:** l'objecte compleix la condició i continua pel pipeline.
+>- **`False`:** l'objecte no compleix la condició i queda descartat.
      
 7. Explica què entra, què surt i què fa cadascuna de les etapes:
 ```
@@ -352,4 +366,12 @@ Get-Process |
     Sort-Object CPU -Descending |
     Select-Object -First 5 Name, Id, CPU
 ```
-11. Es podria millorar l'ordre anterior fent alguna operació en un altre moment del pipeline? Justifica la resposta.
+
+>- Get-Process: obté tots els processos que hi ha al sistema i els passa al pipeline.
+>- Where-Object: rep tots els processos i deixa passar només els que tenen CPU > 10 i Id > 1000.
+>- Sort-Object CPU -Descending: rep els processos filtrats i els ordena de més a menys consum de CPU.
+>- Select-Object -First 5 Name, Id, CPU: selecciona els cinc primers processos ordenats i mostra només les propietats Name, Id i CPU.
+
+8. Es podria millorar l'ordre anterior fent alguna operació en un altre moment del pipeline? Justifica la resposta.
+
+>No, perquè primer cal filtrar els processos, després ordenar-los i finalment seleccionar els cinc primers. Si seleccionem abans d'ordenar, podríem deixar fora processos amb més CPU.
