@@ -194,18 +194,29 @@ La sortida final ha de mostrar només:
 Name
 Status
 ```
+>Get-Service | Where-Object { $_.Status -eq "Running" } | Select-Object Name, Status
 
 Després construeix-ne un altre que mostri els serveis que **no** estan en execució.
+
+>Get-Service | Where-Object { $_.Status -ne "Running" } | Select-Object Name, Status
 
 Respon:
 
 1. Què representa `$_`?
+
+>Representa l'objecte actual que està passant pel pipeline. En aquest cas, representa cada servei.
     
 2. Què representa `$_.Status`?
+
+>Representa l'estat del servei actual, per exemple Running (en execució) o Stopped (aturat).
     
 3. Què fa `Where-Object` amb els objectes que no compleixen la condició?
+
+>Els descarta i no els passa a la següent fase del pipeline.
     
 4. Què fa després `Select-Object`?
+
+>Mostra únicament les propietats Name i Status dels serveis que han passat el filtre.
 
 ## 7. Combinar condicions
 
@@ -218,8 +229,12 @@ $numeros = 1, 5, 10, 15, 20, 25, 30, 40
 Construeix filtres que mostrin:
 
 1. números entre `10` i `30` ambdós inclosos;
+
+>$numeros | Where-Object { $_ -ge 10 -and $_ -le 30 }
     
 2. números inferiors a `10` o superiors a `30`.
+
+>$numeros | Where-Object { $_ -lt 10 -or $_ -gt 30 }
 
 ## 8. Pipeline complet
 
