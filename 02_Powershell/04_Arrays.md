@@ -17,7 +17,7 @@ $servidors
 
 Es mostra tot el contingut de l'array amb els quatre servidors.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power1.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power1.png)
 
 ## 2. Accedir a posicions
 Amb l'array anterior, mostra:
@@ -33,7 +33,7 @@ El primer element d'un array ocupa la posició 0.
 
 Es mostren el primer, segon i quart servidor (0, 1 i 3 en l'array).
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power2.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power2.png)
 
 ## 3. Comptar elements
 Utilitza:
@@ -50,7 +50,7 @@ i torna a comprovar el nombre d'elements.
 
 Primer hi ha 4 servidors. Després d'afegir SRV05, n'hi ha 5.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power3.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power3.png)
 
 ## 4. Modificar un element
 
@@ -66,7 +66,7 @@ Mostra després tot l'array.
 
 L'array queda amb els servidors SRV01, SRV-WEB01 i SRV03.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power4.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power4.png)
 
 ## 5. Array de ports
 
@@ -90,7 +90,7 @@ Respon (i digues quina comanda has executat per obtenir la resposta):
 
 Int32 → $ports[0].GetType().Name
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power5.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power5.png)
 
 ## 6. Array i variables
 
@@ -106,7 +106,7 @@ Mostra'n el contingut.
 
 Es mostra l'array amb SRV01, SRV02 i SRV03.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power6.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power6.png)
 
 ## 7. Resultats d'un cmdlet
 
@@ -114,7 +114,7 @@ Utilitza un array per a determinar el número de processos que s'estan executant
 
 La comanda mostra el nombre total de processos que s'estan executant en el sistema.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power7.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power7.png)
 
 ## 8. General
 
@@ -130,4 +130,4 @@ Nombre de servidors: 4
 ```
 Es mostra el primer servidor, l'últim servidor i el nombre total de servidors sense escriure els noms manualment.
 
-![Descripción de la imagen](/Fotos/Powershell/Arrays/Power8.png)
+![Descripción de la imagen](/02_Powershell/Fotos/04_Arrays/Power8.png)

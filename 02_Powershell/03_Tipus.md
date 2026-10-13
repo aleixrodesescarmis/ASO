@@ -23,7 +23,7 @@ Completa una taula com aquesta:
 | $actiu | $true | Boolean |
 | $espai | `12.5` | Double |
 
-![Descripción de la imagen](/Fotos/Powershell/Tipus/Power1.png)
+![Descripción de la imagen](/02_Powershell/Fotos/03_Tipus/Power1.png)
 
 ## 2. Número o text?
 
@@ -58,7 +58,7 @@ Perquè en el primer cas les variables són números i el signe + fa una suma. E
 
 En el primer cas, $a i $b són **Int32**. En el segon cas, són **String**.
 
-![Descripción de la imagen](/Fotos/Powershell/Tipus/Power2.png)
+![Descripción de la imagen](/02_Powershell/Fotos/03_Tipus/Power2.png)
 
 ## 3. Canviar el tipus d'una variable
 
@@ -89,7 +89,7 @@ Respon:
 
 Per tant, el valor es veu igual, però el tipus de dada és diferent.
 
-![Descripción de la imagen](/Fotos/Powershell/Tipus/Power3.png)
+![Descripción de la imagen](/02_Powershell/Fotos/03_Tipus/Power3.png)
 
 ## 4. Tipus explícits
 
@@ -115,7 +115,7 @@ Respon:
 
 No, no són del mateix tipus. $port és Int32 i $portText és String, encara que els dos mostrin 443.
 
-![Descripción de la imagen](/Fotos/Powershell/Tipus/Power4.png)
+![Descripción de la imagen](/02_Powershell/Fotos/03_Tipus/Power4.png)
 
 ## 5. Booleans
 
@@ -134,7 +134,7 @@ Write-Host "Servidor disponible: $servidorDisponible"
 
 Les dues variables són de tipus Boolean. Es mostra que el servei està actiu (True) i que el servidor no està disponible (False).
 
-![Descripción de la imagen](/Fotos/Powershell/Tipus/Power5.png)
+![Descripción de la imagen](/02_Powershell/Fotos/03_Tipus/Power5.png)
 
 ## 6. General
 
@@ -156,4 +156,4 @@ Després:
 - 125.7 - Double - Número decimal per a l'espai lliure.
 - True - Boolean - Valor lògic per indicar si està actiu.
 
-![Descripción de la imagen](/Fotos/Powershell/Tipus/Power6.png)
+![Descripción de la imagen](/02_Powershell/Fotos/03_Tipus/Power6.png)

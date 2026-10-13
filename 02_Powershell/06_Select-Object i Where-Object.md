@@ -123,12 +123,20 @@ $numeros = 5, 20, 3, 40, 12, 8, 30
 Utilitzant `Where-Object`, mostra (adjunta comandes):
 
 1. els números superiors a `10`;
+
+>$numeros | Where-Object { $_ -gt 10 }
     
 2. els números inferiors a `20`;
+
+>$numeros | Where-Object { $_ -lt 20 }
     
 3. els números iguals a `12`;
+
+>$numeros | Where-Object { $_ -eq 12 }
     
 4. tots els números diferents de `20`.
+
+>$numeros | Where-Object { $_ -ne 20 }
     
 Per cada cas identifica quin operador has utilitzat:
 
@@ -160,13 +168,15 @@ Completa:
 
 |Valor de `$_`|Resultat de `$_ -gt 10`|Passa el filtre?|
 |---|---|---|
-|5|||
-|20|||
-|3|||
+|5|| No | No |
+|20| Si | Si |
+|3| No | No |
 
 Explica amb les teves paraules:
 
 **Què representa** `$_`**?**
+
+>$_ representa l'objecte o valor actual que està passant pel pipeline. En aquest cas, representa cada número de l'array un per un: 5, 20 i 3.
 
 ## 6. Filtrar objectes per propietats
 
