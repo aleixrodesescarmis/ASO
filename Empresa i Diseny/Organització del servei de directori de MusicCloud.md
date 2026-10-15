@@ -228,16 +228,6 @@ MusicCloud
 │   │   ├── GR_Produccio_Musical
 │   │   └── GR_Informatica
 │   │
-│   ├── OU_Responsables
-│   │   ├── GR_Caps_Administracio
-│   │   ├── GR_Caps_Suport_Tecnic
-│   │   ├── GR_Caps_Produccio_Musical
-│   │   └── GR_Caps_Informatica
-│   │
-│   ├── OU_Projectes
-│   │   ├── GR_Campanya_Estiu
-│   │   └── GR_Migracio_Servidors
-│   │
 │   └── GR_Administradors_Sistema
 │
 ├── OU_Equips

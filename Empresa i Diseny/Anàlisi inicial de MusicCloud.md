@@ -25,23 +25,24 @@ MusicCloud necessita reorganitzar la seva infraestructura informàtica. Abans d'
 
 | Persona | Departament | Funció / responsabilitat | Necessita privilegis especials? Per què? |
 |---|---|---|---|
-| Aina Ciurans | Direcció | Treballadora | No, necessita accés als recursos de Direcció per a la gestió general de l'empresa. |
-| Rut Tornil | Direcció | Treballadora | No, necessita accés als recursos de Direcció per a la gestió general de l'empresa. |
-| Dídac Gassó | Administració | Treballador | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Laia Macias | Administració | Cap de departament | Sí, necessita permisos de gestió sobre els recursos del seu departament. |
-| Estel Birosta | Suport tècnic | Treballadora | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Aina Zuriguel | Suport tècnic | Treballadora | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Lluïsa Richart | Suport tècnic | Cap de departament | Sí, necessita permisos de gestió sobre els recursos del seu departament. |
-| Roser Alberch | Producció musical | Treballadora | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Guillem Adella | Producció musical | Treballador | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Meritxell Reglat | Producció musical | Cap de departament | Sí, necessita permisos de gestió sobre els recursos del seu departament. |
-| Alícia Monclús | Producció musical | Treballadora | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Carles Molins | Producció musical | Treballador | No, necessita accés als recursos del departament per realitzar les seves tasques. |
-| Eulàlia Galcera | Producció musical | Treballadora | No, necessita accés als recursos del departament per realitzar les seves tasques. |
+| Aina Ciurans | Direcció | Treballadora | Sí, necessita accés de lectura a totes les carpetes per consultar la informació de l'empresa. |
+| Rut Tornil | Direcció | Treballadora | Sí, necessita accés de lectura a totes les carpetes per consultar la informació de l'empresa. |
+| Dídac Gassó | Administració | Treballador | No, necessita llegir, crear i modificar documents de les carpetes compartides d'Administració. |
+| Laia Macias | Administració | Cap de departament | Sí, necessita llegir, crear i modificar documents i gestionar els recursos d'Administració. |
+| Estel Birosta | Suport tècnic | Treballadora | No, necessita llegir, crear i modificar documents de les carpetes compartides de Suport tècnic. |
+| Aina Zuriguel | Suport tècnic | Treballadora | No, necessita llegir, crear i modificar documents de les carpetes compartides de Suport tècnic. |
+| Lluïsa Richart | Suport tècnic | Cap de departament | Sí, necessita llegir, crear i modificar documents i gestionar els recursos de Suport tècnic. |
+| Roser Alberch | Producció musical | Treballadora | No, necessita llegir, crear i modificar documents de les carpetes compartides de Producció musical. |
+| Guillem Adella | Producció musical | Treballador | No, necessita llegir, crear i modificar documents de les carpetes compartides de Producció musical. |
+| Meritxell Reglat | Producció musical | Cap de departament | Sí, necessita llegir, crear i modificar documents i gestionar els recursos de Producció musical. |
+| Alícia Monclús | Producció musical | Treballadora | No, necessita llegir, crear i modificar documents de les carpetes compartides de Producció musical. |
+| Carles Molins | Producció musical | Treballador | No, necessita llegir, crear i modificar documents de les carpetes compartides de Producció musical. |
+| Eulàlia Galcera | Producció musical | Treballadora | No, necessita llegir, crear i modificar documents de les carpetes compartides de Producció musical. |
 | Talia Costas | Informàtica | Cap de departament | Sí, necessita privilegis tècnics per administrar els sistemes i recursos informàtics. |
 | Alex Soriano | Informàtica | Treballador | Sí, necessita privilegis tècnics per administrar els sistemes i recursos informàtics. |
-| Pere Espinalt | Extern | Usuari extern | No, només necessita accés limitat als recursos que se li autoritzin. |
-| Neus Bages | Extern | Usuària externa | No, només necessita accés limitat als recursos que se li autoritzin. |
+| Pere Espinalt | Extern | Usuari extern | No, només necessita accés als documents i projectes externs que tingui autoritzats. |
+| Neus Bages | Extern | Usuària externa | No, només necessita accés als documents i projectes externs que tingui autoritzats. |
+
 
 ### 1.1. Reflexió
 
@@ -76,7 +77,7 @@ En el cas d'Informàtica, Talia Costas i Alex Soriano necessiten privilegis tèc
 
 | Recurs | Qui creus que l'hauria d'utilitzar? | Per a què? |
 |---|---|---|
-| `/empresa/comu/intercanvi` | Tots els treballadors i usuaris externs | Per intercanviar temporalment documents amb persones de fora de l'empresa. |
+| `/empresa/comu/intercanvi` | Tots els treballadors i usuaris externs | Per intercanviar temporalment documents amb persones de fora de l'empresa i entre departaments. |
 | `/empresa/comu/comunicats` | Tots els treballadors interns | Per consultar comunicats i informació general de l'empresa. |
 | `/empresa/departaments/administracio/compartida` | Treballadors d'Administració | Per guardar i compartir documents que necessiten els membres del departament. |
 | `/empresa/departaments/administracio/gestio_departament` | Laia Macias, cap d'Administració | Per gestionar informació i documents propis de la gestió del departament. |
@@ -155,8 +156,7 @@ Cada vegada que s'incorporés una persona nova, hauríem de configurar manualmen
 
 ***Què passaria quan una persona canviés de departament?***
 
-Hauríem de modificar manualment els permisos de la persona i treure-li els accessos que ja no necessita. Amb molts treballadors, aquesta tasca podria provocar errors.
-
+Hauríem de modificar manualment els permisos de la persona i treure-li els accessos que ja no necessita. També hauríem de revisar totes les carpetes compartides a les quals té accés. Amb molts treballadors, aquesta tasca podria provocar errors.
 
 ### 4.4.
 
@@ -201,7 +201,7 @@ Pere Espinalt deixa de col·laborar amb MusicCloud.
 
 ***Què hauríem de fer amb els seus accessos?***
 
-Hauríem de retirar tots els seus accessos als recursos de MusicCloud, ja que deixa de col·laborar amb l'empresa. També caldria desactivar el seu compte per evitar que pugui tornar a accedir-hi.
+Hauríem de retirar tots els seus accessos als recursos de MusicCloud, com ara les carpetes compartides, els documents i els projectes als quals tenia accés, ja que deixa de col·laborar amb l'empresa. També caldria treure'l dels grups als quals pertanyia i desactivar el seu compte per evitar que pugui tornar a accedir-hi.
 
 ---
 
@@ -240,8 +240,8 @@ Només caldria treure Dídac del grup d'Administració i afegir-lo al grup de Pr
 
 ***Com anomenaries aquests conjunts de persones?***
 
-Els anomenaria departaments, ja que agrupen treballadors que pertanyen a la mateixa àrea de l'empresa i comparteixen necessitats d'accés.
-
+Els anomenaria grups d'usuaris, ja que agrupen persones que comparteixen necessitats d'accés als recursos de l'empresa.
+I posaria a cada grup el nom del seu departament, com administració...
 ---
 
 # 7. Primera proposta per a MusicCloud
