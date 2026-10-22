@@ -60,6 +60,25 @@ Directori actual: ...
 ```
 1. Adjunta el script final.
 2. Explica el procés que has seguit o operacions que has executat abans d'obtenir el script final.
+
+>Script i explicació:
+
+```
+$equip = $env:COMPUTERNAME
+$usuari = $env:USERNAME
+$versio = $PSVersionTable.PSVersion
+$data = Get-Date
+$directori = Get-Location
+
+Write-Host "===== INFORMACIÓ DEL SISTEMA ====="
+Write-Host "Nom de l'equip: $equip"
+Write-Host "Usuari actual: $usuari"
+Write-Host "Versió de PowerShell: $versio"
+Write-Host "Data i hora: $data"
+Write-Host "Directori actual: $directori"
+```
+>He guardat en variables la informació principal del sistema, com el nom de l'equip, l'usuari actual, la versió de PowerShell, la data i el directori actual. Després, he utilitzat Write-Host per mostrar totes les dades de manera ordenada.
+
 # 2. Estat dels serveis
 
 Crea:
@@ -91,6 +110,25 @@ Running: 95
 Not running: 135
 ```
 
+>Script i explicació:
+
+
+```
+$serveis = Get-Service
+$serveisEnExecucio = $serveis | Where-Object {$_.Status -eq "Running"}
+$serveisNoExecutats = $serveis | Where-Object {$_.Status -ne "Running"}
+
+$totalServeis = $serveis.Count
+$totalEnExecucio = $serveisEnExecucio.Count
+$totalNoExecutats = $serveisNoExecutats.Count
+
+Write-Host "===== ESTAT DELS SERVEIS ====="
+Write-Host "Total de serveis: $totalServeis"
+Write-Host "Serveis en execució: $totalEnExecucio"
+Write-Host "Serveis que no estan en execució: $totalNoExecutats"
+```
+>Primer, he utilitzat Get-Service per obtenir tots els serveis de l'ordinador. Després, amb Where-Object, he separat els serveis que estan en execució dels que no ho estan. He guardat els resultats en variables i he utilitzat .Count per comptar cada grup i mostrar-ne el total.
+
 # 3. Processos amb més consum de CPU
 
 Crea:
@@ -114,6 +152,23 @@ Després mostra també:
 ```
 Nombre total de processos: ...
 ```
+
+>Script i explicació:
+
+```
+$processos = Get-Process
+$totalProcessos = $processos.Count
+$processosOrdenats = $processos | Sort-Object CPU -Descending
+$processosPrincipals = $processosOrdenats | Select-Object -First 10 Name, Id, CPU
+
+Write-Host "===== 10 PROCESSOS AMB MÉS ÚS DE CPU ====="
+$processosPrincipals | Format-Table -AutoSize
+
+Write-Host "Nombre total de processos: $totalProcessos"
+```
+
+>He utilitzat Get-Process per obtenir tots els processos i els he guardat en una variable. Després, amb Sort-Object, els he ordenat de més a menys ús de CPU. Amb Select-Object -First 10, he seleccionat els deu primers i n'he mostrat el nom, l'identificador i el temps de CPU. Finalment, he mostrat el nombre total de processos.
+
 # 4. Anàlisi de fitxers d'una carpeta
 
 Crea:
@@ -143,6 +198,24 @@ i utilitza-les per construir el pipeline.
 
 > Tingues en compte que pots trobar tant fitxers com carpetes.
 
+>Script i explicació:
+
+```
+$elements = Get-ChildItem
+$fitxers = $elements | Where-Object {-not $_.PSIsContainer}
+$totalElements = $elements.Count
+$totalFitxers = $fitxers.Count
+$fitxersOrdenats = $fitxers | Sort-Object Length -Descending
+$cincFitxersMesGrans = $fitxersOrdenats | Select-Object -First 5 Name, Length
+
+Write-Host "===== ANÀLISI DE LA CARPETA ====="
+Write-Host "Total d'elements: $totalElements"
+Write-Host "Total de fitxers: $totalFitxers"
+Write-Host "===== ELS 5 FITXERS MÉS GRANS ====="
+$cincFitxersMesGrans | Format-Table -AutoSize
+```
+
+>Primer, he utilitzat Get-ChildItem per obtenir tots els elements de la carpeta actual. Després, amb Where-Object, he separat els fitxers de les carpetes. He comptat el total d'elements i de fitxers amb .Count. Finalment, he ordenat els fitxers segons la seva mida i he mostrat els cinc més grans.
 
 # 5. Diagnosi bàsica del sistema
 
@@ -206,6 +279,53 @@ Pots utilitzar comentaris per separar els diferents blocs:
 # PROCESSOS
 # =====================
 ```
+
+>Script i explicació:
+
+```
+$processos = Get-Process
+$serveis = Get-Service
+$elements = Get-ChildItem
+$fitxers = $elements | Where-Object {-not $_.PSIsContainer}
+
+$processosOrdenats = $processos | Sort-Object CPU -Descending
+$cincProcessos = $processosOrdenats | Select-Object -First 5 Name, Id, CPU
+
+$serveisEnExecucio = $serveis | Where-Object {$_.Status -eq "Running"}
+$serveisNoExecutats = $serveis | Where-Object {$_.Status -ne "Running"}
+
+$fitxersOrdenats = $fitxers | Sort-Object Length -Descending
+$tresFitxersMesGrans = $fitxersOrdenats | Select-Object -First 3 Name, Length
+
+$totalProcessos = $processos.Count
+$totalServeis = $serveis.Count
+$totalEnExecucio = $serveisEnExecucio.Count
+$totalNoExecutats = $serveisNoExecutats.Count
+$totalElements = $elements.Count
+$totalFitxers = $fitxers.Count
+
+Write-Host "===== DIAGNOSI GENERAL ====="
+
+Write-Host "===== PROCESSOS AMB MÉS CPU ====="
+$cincProcessos | Format-Table -AutoSize
+
+Write-Host "===== ESTAT DELS SERVEIS ====="
+Write-Host "Total de serveis: $totalServeis"
+Write-Host "Serveis en execució: $totalEnExecucio"
+Write-Host "Serveis que no estan en execució: $totalNoExecutats"
+
+Write-Host "===== FITXERS MÉS GRANS ====="
+$tresFitxersMesGrans | Format-Table -AutoSize
+
+Write-Host "===== RESUM FINAL ====="
+Write-Host "Total de processos: $totalProcessos"
+Write-Host "Total de serveis: $totalServeis"
+Write-Host "Total d'elements de la carpeta: $totalElements"
+Write-Host "Total de fitxers: $totalFitxers"
+```
+
+>He combinat les comandes dels exercicis anteriors per analitzar els processos, els serveis i els fitxers de la carpeta actual. He seleccionat els cinc processos amb més ús de CPU, he comptat els serveis en execució i els que no ho estan, i he mostrat els tres fitxers més grans. Al final, he fet un resum amb els totals de cada grup.
+
 # 6. Processos pare
 
 Fes un script que per cada procés del sistema ens monstri:
@@ -276,3 +396,42 @@ incorpora-la al script
         ↓
 executa el script complet
 ```
+
+>Script i explicació:
+
+```
+$processos = Get-Process
+$totalProcessos = $processos.Count
+
+Write-Host "===== INFORMACIÓ DELS PROCESSOS I DELS FILS ====="
+Write-Host "Total de processos: $totalProcessos"
+
+foreach ($proces in $processos) {
+    Write-Host ""
+    Write-Host "========================================"
+    Write-Host "Nom del procés: $($proces.ProcessName)"
+    Write-Host "ID del procés: $($proces.Id)"
+
+    try {
+        $fils = $proces.Threads
+        $totalFils = $fils.Count
+        Write-Host "Total de fils: $totalFils"
+
+        foreach ($fil in $fils) {
+            try {
+                $idFil = $fil.Id
+                $tempsCPU = $fil.TotalProcessorTime
+                Write-Host "ID del fil: $idFil - Temps de CPU: $tempsCPU"
+            }
+            catch {
+                Write-Host "No s'ha pogut obtenir el temps de CPU del fil."
+            }
+        }
+    }
+    catch {
+        Write-Host "No s'ha pogut obtenir la informació dels fils d'aquest procés."
+    }
+}
+```
+
+>Primer, he utilitzat Get-Process per obtenir tots els processos de l'ordinador. Amb foreach, he recorregut cada procés i n'he mostrat el nom, l'identificador i el nombre de fils. Després, he recorregut els fils per mostrar-ne l'identificador i el temps de CPU. També he utilitzat try i catch per intentar continuar l'execució si alguna dada no es pot consultar.
