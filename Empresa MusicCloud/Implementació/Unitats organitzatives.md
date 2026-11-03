@@ -9,7 +9,7 @@ MusicCloud ja disposa del domini:
 ```text
 musiccloud.local
 ```
-El servidor `SRV-AD-01` ja és controlador de domini.
+El servidor `SRV-DC-01` ja és controlador de domini.
 
 Ara cal crear una estructura d’unitats organitzatives que permeti organitzar els objectes de l’empresa.
 ## Estructura que cal crear
@@ -37,6 +37,8 @@ MusicCloud
 ```
 Aquesta UO serà el contenidor principal de l’estructura de l’empresa.
 
+>New-ADOrganizationalUnit -Name "MusicCloud" -Path "DC=musiccloud,DC=local"
+
 ## Part 2. Creació de les UO de primer nivell
 
 Dins de la UO `MusicCloud`, creeu les UO següents:
@@ -45,6 +47,16 @@ Usuaris
 Equips
 Grups
 ```
+
+>New-ADOrganizationalUnit -Name "Usuaris" -Path "OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Equips" -Path "OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Grups" -Path "OU=MusicCloud,DC=musiccloud,DC=local"
+
+
+
+
 ## Part 3. Creació de les UO de departaments
 
 Dins de la UO `Usuaris`, creeu les UO següents:
@@ -55,6 +67,17 @@ Desenvolupament
 Sistemes
 Direccio
 ```
+
+>New-ADOrganizationalUnit -Name "Administracio" -Path "OU=Usuaris,OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Comercial" -Path "OU=Usuaris,OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Desenvolupament" -Path "OU=Usuaris,OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Sistemes" -Path "OU=Usuaris,OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Direccio" -Path "OU=Usuaris,OU=MusicCloud,DC=musiccloud,DC=local"
+
 ## Part 4. Creació de les UO d’equips
 
 Dins de la UO `Equips`, creeu les UO següents:
@@ -62,23 +85,81 @@ Dins de la UO `Equips`, creeu les UO següents:
 Clients
 Servidors
 ```
+
+>New-ADOrganizationalUnit -Name "Clients" -Path "OU=Equips,OU=MusicCloud,DC=musiccloud,DC=local"
+
+>New-ADOrganizationalUnit -Name "Servidors" -Path "OU=Equips,OU=MusicCloud,DC=musiccloud,DC=local"
+
 ## Part 5. Verificació
 
 Executeu una consulta que mostri totes les unitats organitzatives del domini.
 
 La sortida ha de mostrar, com a mínim, les UO creades en aquesta pràctica.
+
+>Get-ADOrganizationalUnit -Filter * | Select-Object Name, DistinguishedName
+
+![Descripción de la imagen](/Empresa%20MusicCloud/Implementació/Imatges/Unitats%20organitzatives/Imatge1.png)
+
+
 ## Part 6. Preguntes
 
 Responeu breument:
 
 1. Per què és útil crear una UO principal anomenada `MusicCloud`?  
+
+> Per tenir tots els objectes de l’empresa agrupats i organitzats.
+
 2. Per què se separen `Usuaris`, `Equips` i `Grups`?  
+
+> Perquè sigui més fàcil trobar i gestionar cada tipus d’objecte.
+
 3. Per què els departaments s’han creat dins de `Usuaris`?  
+
+> Per organitzar els usuaris segons el departament on treballen.
+
 4. Per què no és recomanable deixar tots els usuaris dins del contenidor `Users`?  
+
+> Perquè seria més difícil organitzar-los i gestionar els permisos. 
+
 
 ## Part 7. Creació scripts
 
 - 7.1. Crea un script per eliminar totes les OUs creades en la pràctica
+
+```
+$base = "OU=MusicCloud,DC=musiccloud,DC=local"
+
+Get-ADOrganizationalUnit -SearchBase $base -SearchScope Subtree -Filter * | Set-ADOrganizationalUnit -ProtectedFromAccidentalDeletion $false
+
+Set-ADOrganizationalUnit -Identity $base -ProtectedFromAccidentalDeletion $false
+
+Remove-ADOrganizationalUnit -Identity $base -Recursive -Confirm:$false
+```
+
 - 7.2. Crea un script que crei l'OU principal (musiccloud).
+
+```
+$base = "DC=musiccloud,DC=local"
+
+New-ADOrganizationalUnit -Name "MusicCloud" -Path $base
+```
+
 - 7.3. Crea un script que crei l'OU principal i les OUs descendents: Usuaris, Equips i Grups
+
+```
+$base = "DC=musiccloud,DC=local"
+
+New-ADOrganizationalUnit -Name "MusicCloud" -Path $base
+
+$base = "OU=MusicCloud,$base"
+
+New-ADOrganizationalUnit -Name "Usuaris" -Path $base
+New-ADOrganizationalUnit -Name "Equips" -Path $base
+New-ADOrganizationalUnit -Name "Grups" -Path $base
+```
+
 - 7.4. Crea un script que creï l'OU principal si no existeix i que creï únicament les UO descendents que encara no existeixin. El script s'ha de poder executar més d'una vegada sense generar errors ni duplicar objectes.
+
+```
+
+```
