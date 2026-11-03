@@ -161,5 +161,25 @@ New-ADOrganizationalUnit -Name "Grups" -Path $base
 - 7.4. Crea un script que creï l'OU principal si no existeix i que creï únicament les UO descendents que encara no existeixin. El script s'ha de poder executar més d'una vegada sense generar errors ni duplicar objectes.
 
 ```
+Import-Module ActiveDirectory
 
+$domini = "DC=musiccloud,DC=local"
+
+if (-not (Get-ADOrganizationalUnit -Filter "Name -eq 'MusicCloud'")) {
+    New-ADOrganizationalUnit -Name "MusicCloud" -Path $domini
+}
+
+$principal = "OU=MusicCloud,$domini"
+
+if (-not (Get-ADOrganizationalUnit -Filter "Name -eq 'Usuaris'" -SearchBase $principal)) {
+    New-ADOrganizationalUnit -Name "Usuaris" -Path $principal
+}
+
+if (-not (Get-ADOrganizationalUnit -Filter "Name -eq 'Equips'" -SearchBase $principal)) {
+    New-ADOrganizationalUnit -Name "Equips" -Path $principal
+}
+
+if (-not (Get-ADOrganizationalUnit -Filter "Name -eq 'Grups'" -SearchBase $principal)) {
+    New-ADOrganizationalUnit -Name "Grups" -Path $principal
+}
 ```
