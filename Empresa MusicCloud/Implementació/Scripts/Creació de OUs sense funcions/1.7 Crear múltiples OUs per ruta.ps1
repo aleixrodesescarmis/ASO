@@ -14,14 +14,14 @@ foreach ($nomOU in $nomsOU) {
 
 
     try {
-        $ou = Get-ADOrganizationalUnit -Identity "OU=$nomOU,$ruta" -ErrorAction Stop
+        $OU = Get-ADOrganizationalUnit -Identity "OU=$nomOU,$ruta" -ErrorAction Stop
     }
     catch {
-        $ou = $null
+        $OU = $null
     }
 
 
-    if (-not $ou) {
+    if (-not $OU) {
         New-ADOrganizationalUnit -Name $nomOU -Path $ruta
     }
 }
