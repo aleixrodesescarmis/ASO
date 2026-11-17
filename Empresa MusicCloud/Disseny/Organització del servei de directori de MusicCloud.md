@@ -222,11 +222,11 @@ MusicCloud
 │
 ├── OU_Grups
 │   ├── OU_Departaments
-│   │   ├── GR_Direccio
-│   │   ├── GR_Administracio
-│   │   ├── GR_Suport_Tecnic
-│   │   ├── GR_Produccio_Musical
-│   │   └── GR_Informatica
+│   │   ├── GG_Direccio
+│   │   ├── GG_Administracio
+│   │   ├── GG_Suport_Tecnic
+│   │   ├── GG_Produccio_Musical
+│   │   └── GG_Informatica
 │   │
 │   └── GR_Administradors_Sistema
 │

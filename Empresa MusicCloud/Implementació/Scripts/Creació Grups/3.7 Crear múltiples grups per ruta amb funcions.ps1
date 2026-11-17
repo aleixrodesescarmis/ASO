@@ -22,7 +22,7 @@ function Comprovar-Grup {
 function Crear-Grup {
     param($nomGrup, $ruta)
 
-    New-ADGroup -Name $nomGrup -Path $ruta -GroupScope Global -GroupCategory Security
+    New-ADGroup -Name $nomGrup -Path $ruta -GroupScope Global -GroupCategory Distribution
 }
 
 function Crear-Grup-Si-No-Existeix {
