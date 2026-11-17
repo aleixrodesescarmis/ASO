@@ -44,4 +44,4 @@ function Crear-Grups-Secundaris {
 
 $nomsGrup = Get-Content $fitxer
 
-Crear-Grups-Secundaris $nomsGrup $ruta
+Crear-Grups-Secundaris $nomsGrup.Nom $ruta

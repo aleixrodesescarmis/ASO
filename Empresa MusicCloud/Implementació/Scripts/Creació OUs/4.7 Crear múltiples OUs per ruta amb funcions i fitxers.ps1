@@ -42,4 +42,4 @@ function Crear-OUs-Secundaries {
 
 $nomsOU = Get-Content $fitxer
 
-Crear-OUs-Secundaries $nomsOU $ruta
+Crear-OUs-Secundaries $nomsOU.Nom $ruta
