@@ -18,10 +18,10 @@ function Comprovar-Ruta {
 
     try {
         $OU = Get-ADObject -Identity $ruta -ErrorAction Stop
-        $true
+        return $true
     }
     catch {
-        $false
+        return $false
     }
 }
 
@@ -35,9 +35,10 @@ function Comprovar-OU {
 
     try {
         $OU = Get-ADOrganizationalUnit -Identity "OU=$nomOU,$ruta" -ErrorAction Stop
+        return $true
     }
     catch {
-        $OU = $null
+        return $false
     }
 }
 
