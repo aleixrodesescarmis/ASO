@@ -1,0 +1,7 @@
+Nom,Ruta
+GG_Direccio,"OU=OU_Departaments,OU=OU_Grups,OU=MusicCloud,DC=musiccloud,DC=local"
+GG_Administracio,"OU=OU_Departaments,OU=OU_Grups,OU=MusicCloud,DC=musiccloud,DC=local"
+GG_Suport_Tecnic,"OU=OU_Departaments,OU=OU_Grups,OU=MusicCloud,DC=musiccloud,DC=local"
+GG_Produccio_Musical,"OU=OU_Departaments,OU=OU_Grups,OU=MusicCloud,DC=musiccloud,DC=local"
+GG_Informatica,"OU=OU_Departaments,OU=OU_Grups,OU=MusicCloud,DC=musiccloud,DC=local"
+GR_Administradors_Sistema,"OU=OU_Grups,OU=MusicCloud,DC=musiccloud,DC=local"

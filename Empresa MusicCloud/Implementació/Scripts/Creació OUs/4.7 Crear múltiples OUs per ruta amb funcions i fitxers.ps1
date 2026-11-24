@@ -1,14 +1,11 @@
-
 param(
-    [Parameter(Mandatory=$true)]
-    [string]$fitxer,
-
+    [Parameter(Mandatory=$false)]
+    [string]$fitxer = (Join-Path $PSScriptRoot "..\Dades\ous.csv"),
     [Parameter(Mandatory=$false)]
     [string]$ruta = "OU=MusicCloud,DC=musiccloud,DC=local"
 )
 
 Import-Module ActiveDirectory
-
 
 function Comprovar-Ruta {
     param(
@@ -76,20 +73,27 @@ function Crear-OU-Si-No-Existeix {
 function Crear-OUs-Secundaries {
     param(
         [Parameter(Mandatory=$true)]
-        [string[]]$nomsOU,
-        [Parameter(Mandatory=$true)]
-        [string]$ruta
+        [object[]]$nomsOU
     )
 
     foreach ($nomOU in $nomsOU) {
-        Crear-OU-Si-No-Existeix -nomOU $nomOU -ruta $ruta
+
+        $rutaOU = $nomOU.Ruta
+
+        if (-not $rutaOU) {
+            $rutaOU = $ruta
+        }
+
+        if (Comprovar-Ruta -ruta $rutaOU) {
+            Crear-OU-Si-No-Existeix -nomOU $nomOU.Nom -ruta $rutaOU
+        }
     }
 }
 
-if (-not (Comprovar-Ruta -ruta $ruta)) {
+if (-not (Test-Path $fitxer)) {
     exit
 }
 
-$nomsOU = Get-Content $fitxer
+$nomsOU = Import-Csv $fitxer
 
-Crear-OUs-Secundaries -nomsOU $nomsOU -ruta $ruta
+Crear-OUs-Secundaries -nomsOU $nomsOU
